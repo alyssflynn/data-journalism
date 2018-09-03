@@ -102,7 +102,7 @@ function makeResponsive() {
         chartGroup.append("text")
             .attr("transform", `translate(${width / 2}, ${height + margin.top + 20})`)
             .attr("class", "axisText")
-            .text("Average Income");
+            .text("Median Income");
 
         // event listener for mouseover
         circlesGroup.on("mouseover", function() {
