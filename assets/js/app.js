@@ -29,17 +29,17 @@ function makeResponsive() {
         .attr("height", svgHeight);
 
     var chartGroup = svg.append("g")
-        .attr("transform", `translate(${margin.left}, ${margin.top})`);   
-    
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    d3.csv("data/data.csv").then(successHandle, errorHandle);
+
+    d3.csv("https://raw.githubusercontent.com/alyssflynn/data-journalism/master/data/data.csv").then(successHandle, errorHandle);
 
     function errorHandle(error) {
         throw error;
     }
 
     function successHandle(csvData) {
-           
+
         csvData.forEach(function (data) {
             data.income = +data.income;
             data.smokes = +data.smokes;
